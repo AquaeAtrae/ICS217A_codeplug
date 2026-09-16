@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ics217a-codeplug"
+version = "0.1.0"
+requires-python = ">=3.10"
+license = "GPL-3.0-only"
+license-files = ["LICENSE"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Communications :: Ham Radio",
+    "Intended Audience :: Telecommunications Industry",
+]
+dependencies = [
+    "click>=8.0",
+    "pdfplumber>=0.11",
+    "openpyxl>=3.1",
+    "xlrd>=2.0",
+    "python-docx>=1.1",
+]
+
+[project.optional-dependencies]
+ocr      = ["pytesseract>=0.3", "Pillow>=10.0"]
+acroform = ["pypdf>=4.0"]
+dev      = ["pytest>=8.0", "pytest-cov"]
+
+[project.scripts]
+ics217a-codeplug = "ics217a_codeplug.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ics217a_codeplug"]

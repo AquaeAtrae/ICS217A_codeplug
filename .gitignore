@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Test + tooling caches
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Generated codeplugs (outputs, not sources)
+*_review.csv
+*_chirp.csv
+combined_review.csv
+combined_chirp.csv
+v3_chirp*.csv
+manual_review.csv
+
+# Source forms are real ARES documents; kept local, not published
+samples/
