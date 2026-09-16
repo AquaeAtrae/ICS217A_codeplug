@@ -12,13 +12,11 @@ venv/
 .coverage
 htmlcov/
 
-# Generated codeplugs (outputs, not sources)
-*_review.csv
-*_chirp.csv
-combined_review.csv
-combined_chirp.csv
-v3_chirp*.csv
-manual_review.csv
+# Generated codeplugs (outputs, not sources).
+# Catch-all: parsed channel data can carry operator names and contact details,
+# so no CSV is tracked regardless of what -o named it. Force with `git add -f`
+# if a CSV ever genuinely belongs in the repo.
+*.csv
 
 # Source forms are real ARES documents; kept local, not published
 samples/
